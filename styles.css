@@ -92,4 +92,7 @@ footer a:visited {
   main#main-doc {
     margin: 350px auto 0;
   }
+  a.nav-link {
+    padding: 15px 0;
+  }
 }
