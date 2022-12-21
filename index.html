@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Loops and iteration</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>JS Loops and iteration</header>
+      <a href="#Introduction" class="nav-link">Introduction</a>
+      <a href="#for_statement" class="nav-link">for_statement</a>
+      <a href="#do...while_statement" class="nav-link">do...while_statement</a>
+      <a href="#while_statement" class="nav-link">while_statement</a>
+      <a href="#Reference" class="nav-link">Reference</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          Loops offer a quick and easy way to do something repeatedly. This
+          chapter of the JavaScript Guide introduces the different iteration
+          statements available to JavaScript.
+        </p>
+        <p>
+          You can think of a loop as a computerized version of the game where
+          you tell someone to take X steps in one direction, then Y steps in
+          another. For example, the idea "Go five steps to the east" could be
+          expressed this way as a loop:
+        </p>
+        <div class="code">
+          <code>
+            for (let step = 0; step < 5; step++) { <br />
+            // Runs 5 times, with values of step 0 through 4. <br />
+            console.log('Walking east one step'); <br />
+            }
+          </code>
+        </div>
+      </section>
+      <section class="main-section" id="for_statement">
+        <header>for_statement</header>
+        <p>
+          A <span class="special-word">for</span> loop repeats until a specified
+          condition evaluates to false. The JavaScript
+          <span class="special-word">for</span> loop is similar to the Java and
+          C <span class="special-word">for</span> loop.
+        </p>
+        <p>
+          A <span class="special-word">for</span> statement looks as follows:
+        </p>
+        <div class="code">
+          <code>
+            for ([initialExpression]; [conditionExpression];
+            [incrementExpression]) { <br />
+            statement <br />
+            }
+          </code>
+        </div>
+        <p>
+          When a <span class="special-word">for</span> loop executes, the
+          following occurs:
+        </p>
+        <ol>
+          <li>
+            The initializing expression
+            <span class="special-word">initialExpression</span>, if any, is
+            executed. This expression usually initializes one or more loop
+            counters, but the syntax allows an expression of any degree of
+            complexity. This expression can also declare variables.
+          </li>
+          <li>
+            The <span class="special-word">conditionExpression</span> expression
+            is evaluated. If the value of
+            <span class="special-word">conditionExpression</span> is true, the
+            loop statements execute. Otherwise, the
+            <span class="special-word">for</span> loop terminates. (If the
+            <span class="special-word">conditionExpression</span> expression is
+            omitted entirely, the condition is assumed to be true.)
+          </li>
+          <li>
+            The <span class="special-word">statement</span> executes. To execute
+            multiple statements, use a block statement ({ }) to group those
+            statements.
+          </li>
+          <li>
+            If present, the update expression
+            <span class="special-word">incrementExpression</span> is executed.
+          </li>
+          <li>Control returns to Step 2.</li>
+        </ol>
+      </section>
+      <section class="main-section" id="do...while_statement">
+        <header>do...while_statement</header>
+        <p>
+          The <span class="special-word">do...while</span> statement repeats
+          until a specified condition evaluates to false.
+        </p>
+        <p>
+          A <span class="special-word">do...while</span> statement looks as
+          follows:
+        </p>
+        <div class="code">
+          <code>
+            do <br />
+            statement <br />
+            while (condition);
+          </code>
+        </div>
+        <p>
+          <span class="special-word">statement</span> is always executed once
+          before the condition is checked. (To execute multiple statements, use
+          a block statement ({ }) to group those statements.)
+        </p>
+        <p>
+          <span class="special-word">if</span> condition is
+          <span class="special-word">true</span>, the statement executes again.
+          At the end of every execution, the condition is checked. When the
+          condition is <span class="special-word">false</span>, execution stops,
+          and control passes to the statement following
+          <span class="special-word">do...while</span>.
+        </p>
+        <div class="example">
+          <h1>Example</h1>
+          <p>
+            In the following example, the
+            <span class="special-word">do</span> loop iterates at least once and
+            reiterates until <span class="special-word">i</span> is no longer
+            less than <span class="special-word">5</span>.
+          </p>
+          <div class="code">
+            <code>
+              let i = 0; <br />
+              do { <br />
+              i += 1; <br />
+              console.log(i); <br />
+              } while (i < 5);
+            </code>
+          </div>
+        </div>
+      </section>
+      <section class="main-section" id="while_statement">
+        <header>while_statement</header>
+        <p>
+          A while statement executes its statements as long as a specified
+          condition evaluates to true. A while statement looks as follows:
+        </p>
+        <div class="code">
+          <code>
+            while (condition) <br />
+            statement
+          </code>
+        </div>
+        <p>
+          If the <span class="special-word">condition</span> becomes
+          <span class="special-word">false</span>,
+          <span class="special-word">statement</span> within the loop stops
+          executing and control passes to the statement following the loop
+        </p>
+        <p>
+          The condition test occurs before
+          <span class="special-word">statement</span> in the loop is executed.
+          If the condition returns <span class="special-word">true</span>,
+          <span class="special-word">statement</span> is executed and the
+          <span class="special-word">condition</span> is tested again. If the
+          condition returns <span class="special-word">false</span>, execution
+          stops, and control is passed to the statement following
+          <span class="special-word">while</span>.
+        </p>
+        <p>
+          To execute multiple statements, use a block statement ({ }) to group
+          those statements.
+        </p>
+        <div class="example">
+          <h1>Example</h1>
+          <p>
+            The following <span class="special-word">while</span> loop iterates
+            as long as <span class="special-word">n</span> is less than
+            <span class="special-word">3</span>:
+          </p>
+          <div class="code">
+            <code>
+              let n = 0; <br />
+              let x = 0; <br />
+              while (n < 3) { <br />
+              n++; <br />
+              x += n; <br />
+              }
+            </code>
+          </div>
+          <p>
+            With each iteration, the loop increments
+            <span class="special-word">n</span> and adds that value to
+            <span class="special-word">x</span>. Therefore,
+            <span class="special-word">x</span> and
+            <span class="special-word">n</span> take on the following values:
+          </p>
+          <ul>
+            <li>
+              After the first pass: <span class="special-word">n = 1</span> and
+              <span class="special-word">x = 1</span>
+            </li>
+            <li>
+              After the second pass: <span class="special-word">n = 2</span> and
+              <span class="special-word">x = 3</span>
+            </li>
+            <li>
+              After the third pass: <span class="special-word">n = 3</span> and
+              <span class="special-word">x = 6</span>
+            </li>
+          </ul>
+          <p>
+            After completing the third pass, the condition
+            <span class="special-word">n < 3</span> is no longer
+            <span class="special-word">true</span>, so the loop terminates.
+          </p>
+        </div>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <ul>
+          <li>
+            All the documentation in this page is taken from
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration"
+              >MDN</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Made by <a href="https://github.com/yahyaahmed1">Yahya Ahmed</a> with
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+          >FreeCodeCamp</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
